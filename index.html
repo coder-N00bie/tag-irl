@@ -9,10 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pannellum/2.5.6/pannellum.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
-  <script type="module" src="app.js?v=7"></script>
+  <script type="module" src="app.js?v=10"></script>
 </head>
 <body>
 
@@ -86,9 +86,13 @@
           <label class="field"><span>Where</span>
             <select id="set-loc"></select>
           </label>
-          <label class="field" id="custom-wrap" hidden><span>Custom spot (lat, lng or a map link). Photos are best in France, Belgium &amp; the Netherlands.</span>
-            <input id="set-custom" placeholder="45.7640, 4.8357">
-          </label>
+          <div class="field" id="custom-wrap" hidden>
+            <span id="pick-hint">Click the map or search a place. Dots show where street photos exist (green = 360°).</span>
+            <form id="pick-search" class="row"><input id="pick-q" placeholder="Search a town, street or landmark…" autocomplete="off"><button class="btn">Go</button></form>
+            <div id="pick-map"></div>
+            <p id="pick-status" class="muted small"></p>
+            <input id="set-custom" type="hidden">
+          </div>
           <label class="field"><span>Round length</span>
             <select id="set-dur"><option value="3">3 min</option><option value="5">5 min</option><option value="8">8 min</option><option value="12">12 min</option></select>
           </label>
