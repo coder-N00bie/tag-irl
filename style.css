@@ -207,3 +207,8 @@ select:disabled, input:disabled { opacity: .7; }
 .players .botdot { background: var(--gold); border-radius: 3px; }
 .x-bot { background: none; border: 0; color: var(--muted); font-size: 18px; line-height: 1; cursor: pointer; padding: 0 2px; }
 .x-bot:hover { color: var(--tag); }
+#pick-map { height: 300px; border-radius: 12px; border: 1px solid var(--line); background: #1a1d24; }
+#pick-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.9) contrast(.85) saturate(.6); }
+#pick-search { margin: 6px 0 8px; }
+#pick-status { margin: 6px 0 0; }
+#pick-status.ok { color: var(--run); } #pick-status.bad { color: var(--tag); }
